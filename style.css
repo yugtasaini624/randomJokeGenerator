@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding:0;
+  height: 100vh;
+  background: linear-gradient(rgb(165, 223, 243), rgb(82, 180, 213), rgb(24, 160, 206)) no-repeat;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  height: 200px; /* 400px */
+  width: 40%;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  background-color: rgb(246, 234, 234);
+}
+
+.defaultContent{
+  margin: 30px 0px 20px 30px;
+}
+
+.heading{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.emoji{
+  display: inline-block;
+  animation: emojiBounce 0.5s ease-in-out infinite;
+}
+
+.btn{
+  width: 60%;
+  height: 45px;
+  margin: 25px 90px;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(rgb(37, 204, 37), rgb(19, 165, 19));
+  color: aliceblue;
+  font-size: 17px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+#btn:hover{
+  background: linear-gradient(rgb(35, 217, 35));
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.mainContent{
+  display: none;
+  height: 160px;
+  width: 90%;
+  background: linear-gradient(rgb(248, 249, 252), rgb(222, 223, 225));
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  color: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+}
+
+.setUp{
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  color:rgb(0, 16, 16);
+}
+
+.punchLine{
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+  font-style: italic;
+  color:rgb(16, 18, 20);
+}
+
+@keyframes emojiBounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+@media screen and (max-width: 500px) {
+  .heading{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0px 20px -20px;
+  }
+  .btn{
+    width: 80%;
+    margin: 10px 10px 10px 0px;
+  }
+  .container{
+    width: 80%;
+    height: 1600px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .heading{
+    font-size: 20px;
+    text-align: center;
+  }
+  .btn{
+    width: 80%;
+    margin: 20px 0px 20px 20px;
+  }
+  .container{
+    width: 80%;
+    height: 420px;
+  }
+}
