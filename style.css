@@ -1,37 +1,41 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-  margin: 0;
-  padding:0;
   height: 100vh;
   background: linear-gradient(rgb(165, 223, 243), rgb(82, 180, 213), rgb(24, 160, 206)) no-repeat;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .container{
-  height: 200px; /* 400px */
   width: 40%;
-  border: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 1.5rem;
+  max-width: 450px;
+  min-width: 280px;
   background-color: rgb(246, 234, 234);
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .defaultContent{
-  margin: 30px 0px 20px 30px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .heading{
-  text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .emoji{
@@ -41,54 +45,52 @@ body{
 
 .btn{
   width: 60%;
+  max-width: 200px;
+  min-width: 140px;
   height: 45px;
-  margin: 25px 90px;
+  margin: 25px auto 0; /* centered using auto */
   border: none;
   border-radius: 0.5rem;
   background: linear-gradient(rgb(37, 204, 37), rgb(19, 165, 19));
   color: aliceblue;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: 600;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: block;
 }
 
-#btn:hover{
-  background: linear-gradient(rgb(35, 217, 35));
+.btn:hover{
+  background: linear-gradient(rgb(35, 217, 35), rgb(19, 165, 19));
   cursor: pointer;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .mainContent{
   display: none;
-  height: 160px;
   width: 90%;
   background: linear-gradient(rgb(248, 249, 252), rgb(222, 223, 225));
   border-radius: 0.5rem;
-  margin: 0 auto;
+  margin: 15px auto 0;
+  padding: 15px;
   color: black;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid #eee;
 }
 
 .setUp{
-  padding-top: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 800;
-  color:rgb(0, 16, 16);
+  color: rgb(0, 16, 16);
 }
 
 .punchLine{
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-top: 30px;
   text-align: center;
-  font-size: 20px;
+  margin-top: 15px;
+  font-size: 1rem;
   font-weight: 200;
   font-style: italic;
-  color:rgb(16, 18, 20);
+  color: rgb(16, 18, 20);
 }
 
 @keyframes emojiBounce {
@@ -97,33 +99,46 @@ body{
   100% { transform: translateY(0); }
 }
 
-@media screen and (max-width: 500px) {
-  .heading{
-    font-size: 20px;
-    text-align: center;
-    margin: 20px 0px 20px -20px;
-  }
-  .btn{
-    width: 80%;
-    margin: 10px 10px 10px 0px;
-  }
+/* Responsive for tablets */
+@media screen and (max-width: 800px) {
   .container{
-    width: 80%;
-    height: 1600px;
+    width: 70%;
+    padding: 15px;
+  }
+
+  .heading{
+    font-size: 1.8rem;
+  }
+
+  .btn{
+    width: 70%;
+    margin: 20px auto 0;
+  }
+
+  .mainContent{
+    width: 95%;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .heading{
-    font-size: 20px;
-    text-align: center;
+/* Responsive for phones */
+@media screen and (max-width: 500px) {
+  .container{
+    width: 90%;
+    padding: 12px;
   }
+
+  .heading{
+    font-size: 1.5rem;
+  }
+
   .btn{
     width: 80%;
-    margin: 20px 0px 20px 20px;
+    height: 40px;
+    margin: 15px auto 0; /* centered */
   }
-  .container{
-    width: 80%;
-    height: 420px;
+
+  .mainContent{
+    width: 100%;
+    padding: 12px;
   }
 }
